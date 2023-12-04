@@ -18,6 +18,13 @@ interface Berita {
     // Add other properties as needed
   };
 }
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1
+};
 
 export default function Home() {
   const [beritas, setBeritas] = useState<Berita[]>([]);
@@ -46,46 +53,9 @@ export default function Home() {
 
     fetchData();
   }, []);
-
-  const sliderItems = [
-    {
-      id: 1,
-      title: 'Slide 1',
-      imageUrl: 'https://placekitten.com/800/400', // Replace with your image URL
-    },
-    {
-      id: 2,
-      title: 'Slide 2',
-      imageUrl: 'https://placekitten.com/800/401', // Replace with your image URL
-    },
-    // Add more items as needed
-  ];
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {beritas.map((berita) => (
-          <div className="group-8">
-            <div key={berita.id}>
-              <div className="group-9">
-                <div className="overlap-group-3">
-                  <div className="group-10">
-                    <p className="text-wrapper-13">{berita.attributes.judul}</p>
-                    <div className="text-wrapper-14">{berita.attributes.tanggal}</div>
-                  </div>
-                  <div className="vector-wrapper">
-                    <img className="vector" alt="Vector" src={berita.attributes.gambar.url} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* <div>
-        <h1>Your React-Slick Carousel</h1>
-        <SliderComponent items={sliderItems} />
-      </div> */}
+    <main className="">
       <div className="home">
       <div className="div-2">
         <div className="navbar">
@@ -134,7 +104,7 @@ export default function Home() {
         <div className="group-6">
           <div className="group-7">
             <div className="overlap-2">
-              {/* <Slider {...settings}>
+              <Slider {...settings}>
                 {beritas.map((berita) => (
                   <div key={berita.id} className="group">
                     <div className="overlap-group">
@@ -148,7 +118,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-              </Slider> */}
+              </Slider>
             </div>
             <div className="group-12">
               <div className="group-13">
