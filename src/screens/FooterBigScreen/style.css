@@ -1,0 +1,28 @@
+.footer-big-5 {
+  background: linear-gradient(180deg, rgb(1, 106, 191) 0%, rgb(13.25, 48.79, 77.56) 100%) !important;
+}
+
+.footer-big-instance {
+  background-image: url(../../../static/img/location.svg) !important;
+  left: 4px !important;
+}
+
+.footer-big-5-instance {
+  background-image: url(../../../static/img/message.svg) !important;
+}
+
+.design-component-instance-node {
+  background-color: #439be2 !important;
+}
+
+.footer-big-2 {
+  background-image: url(../../../static/img/bg.svg) !important;
+}
+
+.facebook-instance {
+  height: 14px !important;
+  left: 5px !important;
+  position: absolute !important;
+  top: 5px !important;
+  width: 14px !important;
+}
